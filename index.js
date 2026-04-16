@@ -1,7 +1,3 @@
-// index.js
-const weatherApi = "https://api.weather.gov/alerts/active?area="
-
-// Your code here!
 const weatherApi = "https://api.weather.gov/alerts/active?area=";
 
 // DOM elements
@@ -24,6 +20,7 @@ async function fetchWeatherData(state) {
 
     displayWeather(data);
 
+    // ✅ IMPORTANT FIX: clear input ONLY after successful DOM update
     input.value = "";
 
   } catch (error) {
